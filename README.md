@@ -1,4 +1,4 @@
-# GAS-Test-Automation
+#Practise-Automation
 
 GAS-Test-Automation
 
@@ -10,7 +10,7 @@ Cd mkdir create your project.
 -Node.js should be installed
 
 #In Vs Code:
--cd project: GAS-TEST-AUTOMATION
+-cd project: AUTOMATION-PRACTISE
 -npm init then Package json should be created
 -npm install cypress --save -dev -then Cypress should be installed in "package.json"
 

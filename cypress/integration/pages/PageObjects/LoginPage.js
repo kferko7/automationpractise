@@ -5,10 +5,7 @@ export class LoginPage extends BasePage {
 	visit() {
 		cy.visit(`${CONFIG.env.url}/login`)
 	}
-	/*visit() {
-		cy.visit('https://www.automationexercise.com/login')
-	}
-*/
+
 	assertPage() {
 		cy.title().should('eq', 'Automation Exercise - Signup / Login')
 		cy.url().should('include', 'login')
@@ -40,6 +37,10 @@ export class LoginPage extends BasePage {
 				timeout: 10000,
 			})
 			.click()
+	}
+
+	logoutButton(){
+		cy.get("a[href='/logout']").click()
 	}
 
 	/*expectErrorWrongCredentials() {

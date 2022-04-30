@@ -16,28 +16,41 @@ export class BasePage {
 				cy.get('.ds_button')
 			}
 		})
-	}
-
-	confirmAndContinue() {
-		cy.get('.ds_button').click()
-	}
-
-	submit() {
-		const button = cy.get('.ds_button')
-		button.click()
-	}
-
-	openHelpCubicM3() {
-		const dropdown = cy
-			.get('.govuk-details__summary')
-			.contains('Help with cubic metres (㎥)')
-		dropdown.click()
-	}
-
-	openHelpWithTheseDropdown() {
-		const dropdownOpen = cy
-			.get('.govuk-details__summary')
-			.contains('Help with these')
-		dropdownOpen.click()
 	}*/
+
+	expectErrorWrongUsername() {
+		cy.get(".login-form > form[method='post'] > p").should('be.visible', {
+			timeout: 10000,
+		})
+	}
+
+	expectedErrorWrongPassword() {
+		cy.get(".login-form > form[method='post'] > p").should('be.visible', {
+			timeout: 10000,
+		})
+	}
+
+	expectedErrorEmptyCredentials() {
+		cy.get(".login-form > form[method='post'] > p").should('be.visible', {
+			timeout: 10000,
+		})
+	}
+
+	expectedErrorWrongCredentials() {
+		cy.get(".login-form > form[method='post'] > p").should('be.visible', {
+			timeout: 10000,
+		})
+	}
+
+	expectedFillUsename() {
+		cy.get(".login-form > form[method='post'] > p").should('be.visible', {
+			timeout: 10000,
+		})
+	}
+	
+	expectedFillPassword() {
+		cy.get(".login-form > form[method='post'] > p").should('be.visible', {
+			timeout: 10000,
+		})
+	}
 }

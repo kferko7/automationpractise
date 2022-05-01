@@ -17,7 +17,6 @@ When('I click on Login button', loginButton => {
 })
 
 Then('I should be able to login successfully to the Website', () => {
-	//cy.get('.govuk-heading-xl').should('be.visible', { timeout: 10000 })
 	cy.url().should('include', 'com')
 })
 
@@ -31,13 +30,12 @@ When('I login with invalid username and valid password', () => {
 	loginPage.fillPassword(LoginData.password)
 })
 
-When('I click on Sign in button', () => {
+When('I click on Login button', () => {
 	loginPage.loginButton()
 })
 
 Then('I should see information Your email or password is incorrect!', () => {
-	loginPage.formSignIn()
-	loginPage.expectErrorWrongUsername()()
+	loginPage.expectErrorWrongUsername()
 })
 
 //3.Negative Login: Input invalid password and valid username into Login form
@@ -46,22 +44,20 @@ When('I login with invalid password and valid username', () => {
 	loginPage.fillPassword(LoginData.invalidpassword)
 })
 
-When('I click on Sign in button', () => {
+When('I click on Login button', () => {
 	loginPage.loginButton()
 })
 
 Then('I should see information Your email or password is incorrect!', () => {
-	loginPage.formSignIn()
 	loginPage.expectedErrorWrongPassword()
 })
 
 //4.Negative Login: Login with empty credentials into Login form
-When('I click on Sign in button', submit => {
+When('I click on Login button', submit => {
 	loginPage.loginButton()
 })
 
 Then('I should see information Your email or password is incorrect!', () => {
-	loginPage.formSignIn()
 	loginPage.expectedErrorEmptyCredentials()
 })
 
@@ -71,7 +67,7 @@ When('I login with invalid username and invalid password', () => {
 	loginPage.fillPassword(LoginData.invalidpassword)
 })
 
-And('I click on Sign in button', () => {
+And('I click on Login button', () => {
 	loginPage.loginButton()
 })
 
@@ -84,7 +80,7 @@ When('I login with empty username and valid password', () => {
 	loginPage.fillPassword(LoginData.password)
 })
 
-And('I click on Sign in button', () => {
+And('I click on Login button', () => {
 	loginPage.loginButton()
 })
 
@@ -97,7 +93,7 @@ When('I login with empty password and valid username', () => {
 	loginPage.fillUsername(LoginData.username)
 })
 
-And('I click on Sign in button', () => {
+And('I click on Login button', () => {
 	loginPage.loginButton()
 })
 

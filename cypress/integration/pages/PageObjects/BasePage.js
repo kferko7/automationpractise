@@ -18,39 +18,5 @@ export class BasePage {
 		})
 	}*/
 
-	expectErrorWrongUsername() {
-		cy.get(".login-form > form[method='post'] > p").should('be.visible', {
-			timeout: 10000,
-		})
-	}
-
-	expectedErrorWrongPassword() {
-		cy.get(".login-form > form[method='post'] > p").should('be.visible', {
-			timeout: 10000,
-		})
-	}
-
-	expectedErrorEmptyCredentials() {
-		cy.get(".login-form > form[method='post'] > p").should('be.visible', {
-			timeout: 10000,
-		})
-	}
-
-	expectedErrorWrongCredentials() {
-		cy.get(".login-form > form[method='post'] > p").should('be.visible', {
-			timeout: 10000,
-		})
-	}
-
-	expectedFillUsename() {
-		cy.get(".login-form > form[method='post'] > p").should('be.visible', {
-			timeout: 10000,
-		})
-	}
 	
-	expectedFillPassword() {
-		cy.get(".login-form > form[method='post'] > p").should('be.visible', {
-			timeout: 10000,
-		})
-	}
 }

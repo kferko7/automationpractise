@@ -43,30 +43,40 @@ export class LoginPage extends BasePage {
 		cy.get("a[href='/logout']").click()
 	}
 
-	/*expectErrorWrongCredentials() {
-		cy.get('.ds_question__error-message').should('be.visible', {
+	expectErrorWrongUsername() {
+		cy.get(".login-form > form[method='post'] > p").should('be.visible', {
+			timeout: 10000,
+		})
+	}
+
+	expectedErrorWrongPassword() {
+		cy.get(".login-form > form[method='post'] > p").should('be.visible', {
 			timeout: 10000,
 		})
 	}
 
 	expectedErrorEmptyCredentials() {
-		cy.get('p')
-			.contains('Enter your RP&S username')
-			.should('be.visible', { timeout: 10000 })
-		cy.get('p')
-			.contains('Enter your password')
-			.should('be.visible', { timeout: 10000 })
+		cy.get(".login-form > form[method='post'] > p").should('be.visible', {
+			timeout: 10000,
+		})
 	}
 
-	expectedErrorEnterUsername() {
-		cy.get('p')
-			.contains('Enter your RP&S username')
-			.should('be.visible', { timeout: 10000 })
+	expectedErrorWrongCredentials() {
+		cy.get(".login-form > form[method='post'] > p").should('be.visible', {
+			timeout: 10000,
+		})
 	}
 
-	expectedErrorEnterPassword() {
-		cy.get('p')
-			.contains('Enter your password')
-			.should('be.visible', { timeout: 10000 })
-	}*/
+	expectedFillUsename() {
+		cy.get(".login-form > form[method='post'] > p").should('be.visible', {
+			timeout: 10000,
+		})
+	}
+	
+	expectedFillPassword() {
+		cy.get(".login-form > form[method='post'] > p").should('be.visible', {
+			timeout: 10000,
+		})
+	}
+	
 }
